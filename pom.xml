@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tian</groupId>
-    <artifactId>hospital-new</artifactId>
+    <artifactId>hospital-dubbo</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
@@ -24,7 +24,7 @@
         <module>hospital-common</module>
     </modules>
 
-    <name>hospital-new</name>
+    <name>hospital-dubbo</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

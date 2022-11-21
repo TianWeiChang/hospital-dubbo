@@ -11,6 +11,7 @@
         <module name="hospital-center-provider" />
         <module name="hospital-system-service" />
         <module name="hospital-center-service" />
+        <module name="hospital-in-order-service" />
         <module name="hospital-system-provider" />
         <module name="hospital-mq" />
         <module name="hospital-warehouse" />
@@ -22,7 +23,6 @@
         <module name="hospital-common" />
         <module name="hospital-inpatient" />
         <module name="hospital-job" />
-        <module name="hospital-in-order-service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -32,6 +32,7 @@
       <module name="hospital-center" options="" />
       <module name="hospital-center-provider" options="-parameters" />
       <module name="hospital-center-service" options="-parameters" />
+      <module name="hospital-dubbo" options="" />
       <module name="hospital-house" options="-parameters" />
       <module name="hospital-in-order" options="" />
       <module name="hospital-in-order-provider" options="-parameters" />
@@ -39,7 +40,6 @@
       <module name="hospital-inpatient" options="-parameters" />
       <module name="hospital-job" options="-parameters" />
       <module name="hospital-mq" options="-parameters" />
-      <module name="hospital-new" options="" />
       <module name="hospital-outpatient" options="" />
       <module name="hospital-outpatient-provider" options="-parameters" />
       <module name="hospital-outpatient-service" options="-parameters" />

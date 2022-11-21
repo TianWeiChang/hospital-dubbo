@@ -10,7 +10,7 @@
     </modules>
     <parent>
         <groupId>com.tian</groupId>
-        <artifactId>hospital-new</artifactId>
+        <artifactId>hospital-dubbo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
