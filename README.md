@@ -8,6 +8,32 @@
 
 ![1669022742530](assets/1669022742530.png)
 
+## 项目结构介绍
+
+父项目：hospital-dubbo
+
+子项目：
+
+- hospital-admin：医院内人员使用 （集成了thymeleaf）
+- hospital-web：病人外网预约挂号（集成了thymeleaf）
+- hospital-outpatient：门诊部（dubbo服务）
+- hospital-inpatient：住院部（dubbo服务）
+- hospital-warehouse：仓库管理（dubbo服务）
+- hospital-house：病房（dubbo服务）
+- hospital-system：系统设置（dubbo服务）
+- hospital-job：定时任务 
+- hospital-mq：消息队列消费者处理（dubbo服务）
+- hospital-in-order：入库单（dubbo服务）
+- hospital-common：公共
+
+项目结构暂定这样，后期可能会有所调整，但是整体就是
+
+> **web项目+dubbo服务+定时任务+消息队列**
+
+这种方式。
+
+
+
 ## 技术栈
 
 目前项目用到的技术栈如下：
