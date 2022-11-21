@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hospital-in-order-provider" />
+        <module name="hospital-center-provider" />
+        <module name="hospital-system-service" />
+        <module name="hospital-center-service" />
+        <module name="hospital-system-provider" />
+        <module name="hospital-mq" />
+        <module name="hospital-warehouse" />
+        <module name="hospital-outpatient-provider" />
+        <module name="hospital-admin" />
+        <module name="hospital-web" />
+        <module name="hospital-outpatient-service" />
+        <module name="hospital-house" />
+        <module name="hospital-common" />
+        <module name="hospital-inpatient" />
+        <module name="hospital-job" />
+        <module name="hospital-in-order-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hospital-admin" options="-parameters" />
+      <module name="hospital-center" options="" />
+      <module name="hospital-center-provider" options="-parameters" />
+      <module name="hospital-center-service" options="-parameters" />
+      <module name="hospital-house" options="-parameters" />
+      <module name="hospital-in-order" options="" />
+      <module name="hospital-in-order-provider" options="-parameters" />
+      <module name="hospital-in-order-service" options="-parameters" />
+      <module name="hospital-inpatient" options="-parameters" />
+      <module name="hospital-job" options="-parameters" />
+      <module name="hospital-mq" options="-parameters" />
+      <module name="hospital-new" options="" />
+      <module name="hospital-outpatient" options="" />
+      <module name="hospital-outpatient-provider" options="-parameters" />
+      <module name="hospital-outpatient-service" options="-parameters" />
+      <module name="hospital-system" options="" />
+      <module name="hospital-system-provider" options="-parameters" />
+      <module name="hospital-system-service" options="-parameters" />
+      <module name="hospital-warehouse" options="-parameters" />
+      <module name="hospital-web" options="-parameters" />
+    </option>
+  </component>
+</project>

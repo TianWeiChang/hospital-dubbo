@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tian.mapper.DrugInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.tian.entity.DrugInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="drug_name" property="drugName" jdbcType="VARCHAR" />
+    <result column="product_address_id" property="productAddressId" jdbcType="INTEGER" />
+    <result column="unit_id" property="unitId" jdbcType="INTEGER" />
+    <result column="price" property="price" jdbcType="INTEGER" />
+    <result column="drug_type_id" property="drugTypeId" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    update  drug_info
+    set  `status` = 1
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tian.entity.DrugInfo" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into drug_info (drug_name, product_address_id, unit_id, 
+      price, drug_type_id, `status`
+      )
+    values (#{drugName,jdbcType=VARCHAR}, #{productAddressId,jdbcType=INTEGER}, #{unitId,jdbcType=INTEGER}, 
+      #{price,jdbcType=INTEGER}, #{drugTypeId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.tian.entity.DrugInfo" >
+    update drug_info
+    set drug_name = #{drugName,jdbcType=VARCHAR},
+      product_address_id = #{productAddressId,jdbcType=INTEGER},
+      unit_id = #{unitId,jdbcType=INTEGER},
+      price = #{price,jdbcType=INTEGER},
+      drug_type_id = #{drugTypeId,jdbcType=INTEGER},
+      `status` = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select id, drug_name, product_address_id, unit_id, price, drug_type_id, `status`
+    from drug_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectList" resultMap="BaseResultMap" >
+    select id, drug_name, product_address_id, unit_id, price, drug_type_id, `status`
+    from drug_info
+    where `status` = 0
+    <if test="drugName!=null and drugName!=''">
+      AND drug_name = #{drugName,jdbcType=VARCHAR}
+    </if>
+  </select>
+
+  <select id="selectPage" resultType="com.tian.dto.DrugInfoDto" >
+    select di.id, di.drug_name drugName, di.price,dti.drug_type_Name drugTypeName ,di.drug_type_id drugTypeId ,
+           di.product_address_id productAddressId,di.unit_id unitId,  ui.unit_name unitName , dp.drug_product_address_Name productAddress
+    from drug_info di
+    LEFT JOIN drug_type_info dti ON di.drug_type_id=dti.id
+    LEFT JOIN unit_info ui ON di.unit_id=ui.id
+    LEFT JOIN drug_product_address_info dp ON di.product_address_id=dp.id
+    where di.`status` = 0
+    <if test="drugName!=null and drugName!=''">
+      AND di.drug_name = #{drugName,jdbcType=VARCHAR}
+    </if>
+  </select>
+
+  <select id="count" resultType="int" >
+    select count(1)
+    from drug_info
+    where `status` = 0
+    <if test="drugName!=null and drugName!=''">
+      AND drug_name = #{drugName,jdbcType=VARCHAR}
+    </if>
+  </select>
+</mapper>
