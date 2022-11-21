@@ -1,0 +1,9 @@
+com\tian\service\RoleServiceImpl.class
+com\tian\mapper\UserMapper.class
+com\tian\mapper\RoleMapper.class
+com\tian\SystemApplication.class
+com\tian\service\SystemServiceImpl.class
+com\tian\controller\TestController.class
+com\tian\service\UserServiceImpl.class
+com\tian\mapper\MenuMapper.class
+com\tian\service\MenuServiceImpl.class
