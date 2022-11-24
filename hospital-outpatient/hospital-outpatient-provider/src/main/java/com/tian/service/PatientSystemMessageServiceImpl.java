@@ -16,10 +16,11 @@ import java.util.List;
  * 患者 站内信
  */
 @Slf4j
-@Service(version = "1.0.0")
+@Service(version = "1.0.0", retries = 0)
 public class PatientSystemMessageServiceImpl implements PatientSystemMessageService {
     @Resource
     private PatientSystemMessageMapper patientSystemMessageMapper;
+
     @Override
     public List<PatientSystemMessage> selectListByPatientId(Integer patientId) {
         return patientSystemMessageMapper.selectListByPatientId(patientId);

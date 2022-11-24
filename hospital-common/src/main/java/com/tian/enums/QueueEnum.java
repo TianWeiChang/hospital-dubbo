@@ -24,6 +24,10 @@ public enum QueueEnum {
      */
     DOCTOR_ADD_LOG(MqConstants.DOCTOR_ADD_LOG, MqConstants.DOCTOR_ADD_LOG, MqConstants.DOCTOR_ADD_LOG),
     /**
+     * 添加医生日志
+     */
+    PAY_SUCCESS_MSG(MqConstants.PAY_SUCCESS_MSG, MqConstants.PAY_SUCCESS_MSG, MqConstants.PAY_SUCCESS_MSG),
+    /**
      * 医生给病人开处方
      */
     PRICING_LOG(MqConstants.PRICING_LOG, MqConstants.PRICING_LOG, MqConstants.PRICING_LOG);

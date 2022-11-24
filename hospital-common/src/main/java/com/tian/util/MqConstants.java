@@ -24,4 +24,8 @@ public class MqConstants {
      * 登录操作日志
      */
     public static final String DRUG_INFO_OPERATION_LOG = "drug.info.operation.log";
+    /**
+     *
+     */
+    public static final String PAY_SUCCESS_MSG = "pay.success.msg";
 }

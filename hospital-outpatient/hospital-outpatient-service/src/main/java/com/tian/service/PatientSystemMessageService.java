@@ -8,6 +8,8 @@ import java.util.List;
  * @author tianwc 公众号：java后端技术全栈、面试专栏
  * @version 1.0.0
  * @date 2022年11月21日 08:36
+ * <p>
+ * 病人站内信
  */
 public interface PatientSystemMessageService {
 
