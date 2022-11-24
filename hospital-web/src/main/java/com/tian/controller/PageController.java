@@ -24,7 +24,7 @@ import java.util.List;
  * @date 2022年11月19日 22:14
  */
 @Controller
-public class UserLoginController {
+public class PatientLoginController {
 
     @Reference(version = "1.0.0")
     private MenuService menuService;
@@ -46,8 +46,7 @@ public class UserLoginController {
     public List<TreeNode> menuTree(HttpServletRequest request) {
         String result = redisConfig.get(RedisPrefixConstant.SESSION_KEY_PREFIX + request.getSession().getId());
         OuterPatientRegister outerPatientRegister = JSONObject.parseObject(result, OuterPatientRegister.class);
-        //获取用户登陆id根据不同的用户有不停菜单
-        ///获取用户登陆id根据不同的用户有不停菜单
+        //可以直接写死 因为目前外网系统菜单不多，大家都是一个样的，可以再前端页面上写死
         List<Menu> list = menuService.queryMenuByUid(outerPatientRegister.getId());
         //创建list集合
         //把list放入nodes
